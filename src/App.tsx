@@ -1,6 +1,7 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import { AuthProvider } from './contexts/AuthContext.tsx';
+import { ProtectedRoute } from './components/auth/ProtectedRoute.tsx';
 import { Navbar } from './components/layout/Navbar.tsx';
 import { Footer } from './components/layout/Footer.tsx';
 import { LandingPage } from './pages/LandingPage.tsx';
@@ -21,16 +22,77 @@ export default function App() {
           <Navbar />
           <main className="flex-1">
             <Routes>
+              {/* Public Landing & Authentication Entrypoint */}
               <Route path="/" element={<LandingPage />} />
-              <Route path="/dashboard" element={<DashboardPage />} />
-              <Route path="/chat" element={<ChatbotPage />} />
-              <Route path="/lessons/new" element={<CreateLessonPage />} />
-              <Route path="/lessons/:id" element={<LessonWorkspacePage />} />
-              <Route path="/lessons/:id/evidence" element={<EvidenceViewerPage />} />
-              <Route path="/search" element={<CrossModalSearchPage />} />
-              <Route path="/jobs" element={<ProcessingJobsPage />} />
-              <Route path="/settings" element={<SettingsPage />} />
-              <Route path="*" element={<Navigate to="/dashboard" replace />} />
+
+              {/* Protected Application Routes requiring active login */}
+              <Route
+                path="/dashboard"
+                element={
+                  <ProtectedRoute>
+                    <DashboardPage />
+                  </ProtectedRoute>
+                }
+              />
+              <Route
+                path="/chat"
+                element={
+                  <ProtectedRoute>
+                    <ChatbotPage />
+                  </ProtectedRoute>
+                }
+              />
+              <Route
+                path="/lessons/new"
+                element={
+                  <ProtectedRoute>
+                    <CreateLessonPage />
+                  </ProtectedRoute>
+                }
+              />
+              <Route
+                path="/lessons/:id"
+                element={
+                  <ProtectedRoute>
+                    <LessonWorkspacePage />
+                  </ProtectedRoute>
+                }
+              />
+              <Route
+                path="/lessons/:id/evidence"
+                element={
+                  <ProtectedRoute>
+                    <EvidenceViewerPage />
+                  </ProtectedRoute>
+                }
+              />
+              <Route
+                path="/search"
+                element={
+                  <ProtectedRoute>
+                    <CrossModalSearchPage />
+                  </ProtectedRoute>
+                }
+              />
+              <Route
+                path="/jobs"
+                element={
+                  <ProtectedRoute>
+                    <ProcessingJobsPage />
+                  </ProtectedRoute>
+                }
+              />
+              <Route
+                path="/settings"
+                element={
+                  <ProtectedRoute>
+                    <SettingsPage />
+                  </ProtectedRoute>
+                }
+              />
+
+              {/* Fallback wildcard redirects unauthenticated visitors to landing page */}
+              <Route path="*" element={<Navigate to="/" replace />} />
             </Routes>
           </main>
           <Footer />

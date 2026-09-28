@@ -17,7 +17,7 @@ import { useAuth } from '../contexts/AuthContext.tsx';
 
 export const LandingPage: React.FC = () => {
   const navigate = useNavigate();
-  const { signIn, isAuthenticated, currentUser } = useAuth();
+  const { signIn, signInWithEmailOrGuest, isAuthenticated, currentUser } = useAuth();
 
   const [authMode, setAuthMode] = useState<'signin' | 'signup'>('signin');
   const [logoRevealed, setLogoRevealed] = useState(false);
@@ -48,6 +48,7 @@ export const LandingPage: React.FC = () => {
     } catch (err: any) {
       console.warn('Google Sign-In notice:', err);
       // Fallback guest transition if popup closed
+      signInWithEmailOrGuest('Google Scholar', 'scholar@google.com');
       navigate('/dashboard');
     } finally {
       setIsSubmitting(false);
@@ -59,10 +60,12 @@ export const LandingPage: React.FC = () => {
     setIsSubmitting(true);
     setAuthNotice(authMode === 'signin' ? 'Signing in...' : 'Creating your account...');
 
+    signInWithEmailOrGuest(name || (authMode === 'signin' ? 'Student User' : 'New Scholar'), email || 'student@lecturelens.ai');
+
     setTimeout(() => {
       setIsSubmitting(false);
       navigate('/dashboard');
-    }, 700);
+    }, 400);
   };
 
   return (
