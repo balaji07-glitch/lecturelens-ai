@@ -1,0 +1,760 @@
+{
+  "lessons": [
+    {
+      "id": "lesson-1790629036558",
+      "title": "Introduction to Artificial Intelligence and Machine Learning",
+      "subject": "Computer Science – Artificial Intelligence",
+      "course": "CSAI204",
+      "instructor": "Dr. Arun Kumar",
+      "lecture_date": "2026-09-30",
+      "description": "This lecture introduces the fundamentals of Artificial Intelligence (AI) and Machine Learning (ML), including their real-world applications, basic algorithms, data processing techniques, and the role of AI in automation. Students will explore practical examples such as virtual assistants, recommendation systems, image recognition, and predictive analytics.",
+      "created_at": "2026-09-28T20:57:16.559Z",
+      "updated_at": "2026-09-28T20:57:16.899Z"
+    },
+    {
+      "id": "lesson-token-ring-101",
+      "title": "Computer Networks: Ring Topology & Token Passing",
+      "subject": "Computer Science",
+      "course": "CS 435: Computer Networks & Distributed Systems",
+      "instructor": "Prof. Ananya Rao",
+      "lecture_date": "2026-03-24",
+      "description": "Detailed exploration of Token Ring network architecture (IEEE 802.5), deterministic media access control, token circulation mechanics, station failure modes, MAU bypass relays, and latency calculations.",
+      "created_at": "2026-03-24T09:00:00.000Z",
+      "updated_at": "2026-03-24T11:30:00.000Z"
+    }
+  ],
+  "sourceFiles": [
+    {
+      "id": "file-audio-ring-01",
+      "lesson_id": "lesson-token-ring-101",
+      "original_filename": "lecture_04_ring_topology_audio.mp3",
+      "stored_filename": "lecture_04_ring_topology_audio.mp3",
+      "mime_type": "audio/mp3",
+      "modality": "audio",
+      "file_size": 14820000,
+      "file_url": "/demo-audio/ring_topology.mp3",
+      "processing_status": "completed",
+      "created_at": "2026-03-24T09:02:00.000Z"
+    },
+    {
+      "id": "file-diagram-ring-01",
+      "lesson_id": "lesson-token-ring-101",
+      "original_filename": "token_ring_network_diagram.jpg",
+      "stored_filename": "ring_topology_diagram_1790618309172.jpg",
+      "mime_type": "image/jpeg",
+      "modality": "visual",
+      "file_size": 428000,
+      "file_url": "/src/assets/images/ring_topology_diagram_1790618309172.jpg",
+      "processing_status": "completed",
+      "created_at": "2026-03-24T09:03:00.000Z"
+    },
+    {
+      "id": "file-1790629036863-1701",
+      "lesson_id": "lesson-1790629036558",
+      "original_filename": "Introduction_to_AI_and_Machine_Learning_Audio.mp3",
+      "stored_filename": "files-1790629036583-729114039.mp3",
+      "mime_type": "audio/mpeg",
+      "modality": "audio",
+      "file_size": 2151384,
+      "file_url": "/uploads/files-1790629036583-729114039.mp3",
+      "processing_status": "completed",
+      "created_at": "2026-09-28T20:57:16.863Z"
+    },
+    {
+      "id": "file-1790629036863-3076",
+      "lesson_id": "lesson-1790629036558",
+      "original_filename": "AI_ML_Lecture_Audio_Script.txt",
+      "stored_filename": "files-1790629036698-50972516.txt",
+      "mime_type": "text/plain",
+      "modality": "visual",
+      "file_size": 2518,
+      "file_url": "/uploads/files-1790629036698-50972516.txt",
+      "processing_status": "completed",
+      "created_at": "2026-09-28T20:57:16.863Z"
+    },
+    {
+      "id": "file-1790629036863-6712",
+      "lesson_id": "lesson-1790629036558",
+      "original_filename": "a_clean_modern_neon_glow_infographic_poster_on_a.png",
+      "stored_filename": "files-1790629036699-764630491.png",
+      "mime_type": "image/png",
+      "modality": "visual",
+      "file_size": 1408870,
+      "file_url": "/uploads/files-1790629036699-764630491.png",
+      "processing_status": "completed",
+      "created_at": "2026-09-28T20:57:16.863Z"
+    },
+    {
+      "id": "file-1790629036863-1461",
+      "lesson_id": "lesson-1790629036558",
+      "original_filename": "Introduction_to_AI_and_Machine_Learning_Notes.pdf",
+      "stored_filename": "files-1790629036771-219349142.pdf",
+      "mime_type": "application/pdf",
+      "modality": "visual",
+      "file_size": 2496668,
+      "file_url": "/uploads/files-1790629036771-219349142.pdf",
+      "processing_status": "completed",
+      "created_at": "2026-09-28T20:57:16.863Z"
+    }
+  ],
+  "transcriptSegments": [
+    {
+      "id": "seg-01",
+      "lesson_id": "lesson-token-ring-101",
+      "source_file_id": "file-audio-ring-01",
+      "start_time": 0,
+      "end_time": 28,
+      "speaker": "Prof. Rao",
+      "text": "Good morning everyone. Today we are examining deterministic media access protocols, focusing directly on the Token Ring topology standardized under IEEE 802.5. Look up at the board diagram.",
+      "extraction_method": "gemini-3.8-flash",
+      "confidence": 0.98,
+      "correction_status": "original"
+    },
+    {
+      "id": "seg-02",
+      "lesson_id": "lesson-token-ring-101",
+      "source_file_id": "file-audio-ring-01",
+      "start_time": 29,
+      "end_time": 68,
+      "speaker": "Prof. Rao",
+      "text": "Notice how all workstations—labeled Station A through Station D on our visual diagram—are wired in a closed, unidirectional loop. Data frames and the control token flow in only one direction, clockwise here.",
+      "extraction_method": "gemini-3.8-flash",
+      "confidence": 0.97,
+      "correction_status": "original"
+    },
+    {
+      "id": "seg-03",
+      "lesson_id": "lesson-token-ring-101",
+      "source_file_id": "file-audio-ring-01",
+      "start_time": 69,
+      "end_time": 118,
+      "speaker": "Prof. Rao",
+      "text": "A special 3-byte frame called the Token continuously circles the ring. When Station A wants to transmit data to Station C, it must capture the free token, flip the busy bit from zero to one, and append its data packet.",
+      "extraction_method": "gemini-3.8-flash",
+      "confidence": 0.96,
+      "correction_status": "original"
+    },
+    {
+      "id": "seg-04",
+      "lesson_id": "lesson-token-ring-101",
+      "source_file_id": "file-audio-ring-01",
+      "start_time": 119,
+      "end_time": 165,
+      "speaker": "Prof. Rao",
+      "text": "Station B receives the frame, inspects the destination MAC address, sees it is meant for Station C, regenerates the signal, and forwards it along. No collision can ever occur because only the token holder transmits.",
+      "extraction_method": "gemini-3.8-flash",
+      "confidence": 0.98,
+      "correction_status": "original"
+    },
+    {
+      "id": "seg-05",
+      "lesson_id": "lesson-token-ring-101",
+      "source_file_id": "file-audio-ring-01",
+      "start_time": 166,
+      "end_time": 215,
+      "speaker": "Prof. Rao",
+      "text": "Now look at the textbook slide where it says: \"Station C Disconnected: Entire Ring Down\". Historically, a pure physical ring had a fatal single point of failure—if any cable severed, the loop broke.",
+      "extraction_method": "gemini-3.8-flash",
+      "confidence": 0.95,
+      "correction_status": "original"
+    },
+    {
+      "id": "seg-06",
+      "lesson_id": "lesson-token-ring-101",
+      "source_file_id": "file-audio-ring-01",
+      "start_time": 216,
+      "end_time": 270,
+      "speaker": "Prof. Rao",
+      "text": "However, please correct this limitation in your notes! Real-world deployments use a Multistation Access Unit or MAU. The physical topology is actually a star, with an electromechanical relay that instantly bypasses any powered-down or severed station.",
+      "extraction_method": "gemini-3.8-flash",
+      "confidence": 0.99,
+      "correction_status": "original"
+    },
+    {
+      "id": "seg-file-1790629036863-1701-1",
+      "lesson_id": "lesson-1790629036558",
+      "source_file_id": "file-1790629036863-1701",
+      "start_time": 0,
+      "end_time": 30,
+      "speaker": "Instructor",
+      "text": "Opening lecture remarks on Introduction to AI and Machine Learning Audio. Outlining fundamental theoretical constructs, core architecture, and operational expectations.",
+      "extraction_method": "demo-grounded",
+      "confidence": 0.94,
+      "correction_status": "original"
+    },
+    {
+      "id": "seg-file-1790629036863-1701-2",
+      "lesson_id": "lesson-1790629036558",
+      "source_file_id": "file-1790629036863-1701",
+      "start_time": 31,
+      "end_time": 85,
+      "speaker": "Instructor",
+      "text": "Examining the schematic illustrated on the presentation screen. Notice the discrete nodes and the directional signal pathway.",
+      "extraction_method": "demo-grounded",
+      "confidence": 0.92,
+      "correction_status": "original"
+    },
+    {
+      "id": "seg-file-1790629036863-1701-3",
+      "lesson_id": "lesson-1790629036558",
+      "source_file_id": "file-1790629036863-1701",
+      "start_time": 86,
+      "end_time": 140,
+      "speaker": "Instructor",
+      "text": "When examining message transmission delay, propagation velocity and packet overhead dictate the lower bound of latency.",
+      "extraction_method": "demo-grounded",
+      "confidence": 0.91,
+      "correction_status": "original"
+    }
+  ],
+  "visualEvidence": [
+    {
+      "id": "vis-01",
+      "lesson_id": "lesson-token-ring-101",
+      "source_file_id": "file-diagram-ring-01",
+      "page_number": 1,
+      "image_region": {
+        "x": 12,
+        "y": 15,
+        "width": 76,
+        "height": 70,
+        "label": "Circular Ring Loop"
+      },
+      "ocr_text": "TOKEN RING NETWORK (IEEE 802.5)\nStation A (Transmitter) -> Station B (Repeater) -> Station C (Receiver) -> Station D (Monitor)\nDirection of Token: Clockwise\nToken Format: Starting Delimiter (1B) | Access Control (1B) | Ending Delimiter (1B)\nWarning Note: Single Cable Cut Disables Entire Loop",
+      "visual_description": "A technical diagram illustrating a four-node Token Ring topology. Four desktop workstations (Station A, B, C, D) are arranged symmetrically around a circular pathway with directional arrowheads showing clockwise frame transmission. A highlighted glowing 3-byte token frame is transitioning between Station A and Station B. A red callout box warns of single-cable vulnerability.",
+      "detected_elements": [
+        "Station A (Node 1)",
+        "Station B (Node 2)",
+        "Station C (Node 3)",
+        "Station D (Node 4)",
+        "Clockwise Flow Arrows",
+        "Token Frame Structure (SD, AC, ED)",
+        "Vulnerability Callout Box"
+      ],
+      "extraction_method": "gemini-3.8-flash-vision",
+      "confidence": 0.96,
+      "processing_status": "completed"
+    },
+    {
+      "id": "vis-file-1790629036863-3076",
+      "lesson_id": "lesson-1790629036558",
+      "source_file_id": "file-1790629036863-3076",
+      "page_number": 1,
+      "ocr_text": "LECTURE DIAGRAM (AI_ML_Lecture_Audio_Script.txt)\n- Component A (Primary)\n- Component B (Intermediate)\n- Flow: Sequential / Unidirectional\n- Notes: Verify fault isolation mechanism",
+      "visual_description": "A technical educational diagram displaying connected nodes with directional flow indicators, labeled components, and an analytical callout note.",
+      "detected_elements": [
+        "Main Title Header",
+        "Node A",
+        "Node B",
+        "Flow Arrows",
+        "Analytical Callout"
+      ],
+      "extraction_method": "demo-grounded",
+      "confidence": 0.92,
+      "processing_status": "completed",
+      "image_region": {
+        "x": 10,
+        "y": 15,
+        "width": 80,
+        "height": 70,
+        "label": "Main Diagram Canvas"
+      }
+    },
+    {
+      "id": "vis-file-1790629036863-6712",
+      "lesson_id": "lesson-1790629036558",
+      "source_file_id": "file-1790629036863-6712",
+      "page_number": 1,
+      "ocr_text": "LECTURE DIAGRAM (a_clean_modern_neon_glow_infographic_poster_on_a.png)\n- Component A (Primary)\n- Component B (Intermediate)\n- Flow: Sequential / Unidirectional\n- Notes: Verify fault isolation mechanism",
+      "visual_description": "A technical educational diagram displaying connected nodes with directional flow indicators, labeled components, and an analytical callout note.",
+      "detected_elements": [
+        "Main Title Header",
+        "Node A",
+        "Node B",
+        "Flow Arrows",
+        "Analytical Callout"
+      ],
+      "extraction_method": "demo-grounded",
+      "confidence": 0.92,
+      "processing_status": "completed",
+      "image_region": {
+        "x": 10,
+        "y": 15,
+        "width": 80,
+        "height": 70,
+        "label": "Main Diagram Canvas"
+      }
+    },
+    {
+      "id": "vis-file-1790629036863-1461",
+      "lesson_id": "lesson-1790629036558",
+      "source_file_id": "file-1790629036863-1461",
+      "page_number": 1,
+      "ocr_text": "LECTURE DIAGRAM (Introduction_to_AI_and_Machine_Learning_Notes.pdf)\n- Component A (Primary)\n- Component B (Intermediate)\n- Flow: Sequential / Unidirectional\n- Notes: Verify fault isolation mechanism",
+      "visual_description": "A technical educational diagram displaying connected nodes with directional flow indicators, labeled components, and an analytical callout note.",
+      "detected_elements": [
+        "Main Title Header",
+        "Node A",
+        "Node B",
+        "Flow Arrows",
+        "Analytical Callout"
+      ],
+      "extraction_method": "demo-grounded",
+      "confidence": 0.92,
+      "processing_status": "completed",
+      "image_region": {
+        "x": 10,
+        "y": 15,
+        "width": 80,
+        "height": 70,
+        "label": "Main Diagram Canvas"
+      }
+    }
+  ],
+  "concepts": [
+    {
+      "id": "concept-01",
+      "lesson_id": "lesson-token-ring-101",
+      "name": "Deterministic Access vs Collision",
+      "description": "Unlike CSMA/CD in Ethernet where stations compete and collide, Token Ring uses a circulating authorization token ensuring maximum bounded transmission delay and zero collisions.",
+      "concept_type": "protocol",
+      "related_evidence_ids": [
+        "seg-03",
+        "seg-04",
+        "vis-01"
+      ],
+      "source_modalities": [
+        "audio",
+        "visual"
+      ],
+      "created_at": "2026-03-24T09:05:00.000Z"
+    },
+    {
+      "id": "concept-02",
+      "lesson_id": "lesson-token-ring-101",
+      "name": "Token Circulation & Busy Bit",
+      "description": "A 3-byte control frame with Starting Delimiter, Access Control byte, and Ending Delimiter. The token bit in the Access Control byte indicates whether the token is free (0) or busy carrying data (1).",
+      "concept_type": "core_concept",
+      "related_evidence_ids": [
+        "seg-03",
+        "vis-01"
+      ],
+      "source_modalities": [
+        "audio",
+        "visual"
+      ],
+      "created_at": "2026-03-24T09:05:00.000Z"
+    },
+    {
+      "id": "concept-03",
+      "lesson_id": "lesson-token-ring-101",
+      "name": "Physical Star vs Logical Ring (MAU)",
+      "description": "While logically data circulates in a ring, modern physical implementation uses a Multistation Access Unit (MAU) forming a physical star where relays automatically bypass severed nodes.",
+      "concept_type": "component",
+      "related_evidence_ids": [
+        "seg-05",
+        "seg-06",
+        "vis-01"
+      ],
+      "source_modalities": [
+        "audio",
+        "visual"
+      ],
+      "created_at": "2026-03-24T09:05:00.000Z"
+    },
+    {
+      "id": "concept-04",
+      "lesson_id": "lesson-token-ring-101",
+      "name": "Single Point of Failure Vulnerability",
+      "description": "A traditional pure ring topology suffers complete failure if any single link or station cable is broken, requiring active bypass or dual-counter-rotating rings (FDDI).",
+      "concept_type": "core_concept",
+      "related_evidence_ids": [
+        "seg-05",
+        "vis-01"
+      ],
+      "source_modalities": [
+        "audio",
+        "visual"
+      ],
+      "created_at": "2026-03-24T09:05:00.000Z"
+    },
+    {
+      "id": "concept-lesson-1790629036558-1",
+      "lesson_id": "lesson-1790629036558",
+      "name": "Deterministic Flow Protocol",
+      "description": "System rules governing authorized transmission sequences without packet collision.",
+      "concept_type": "protocol",
+      "related_evidence_ids": [
+        "seg-file-1790629036863-1701-1",
+        "seg-file-1790629036863-1701-2",
+        "seg-file-1790629036863-1701-3",
+        "vis-file-1790629036863-3076",
+        "vis-file-1790629036863-6712",
+        "vis-file-1790629036863-1461"
+      ],
+      "source_modalities": [
+        "audio",
+        "visual"
+      ],
+      "created_at": "2026-09-28T20:57:16.897Z"
+    },
+    {
+      "id": "concept-lesson-1790629036558-2",
+      "lesson_id": "lesson-1790629036558",
+      "name": "Single Link Vulnerability",
+      "description": "Architectural risk where disruption of an individual pathway compromises system continuity.",
+      "concept_type": "core_concept",
+      "related_evidence_ids": [
+        "vis-file-1790629036863-3076",
+        "vis-file-1790629036863-6712",
+        "vis-file-1790629036863-1461"
+      ],
+      "source_modalities": [
+        "visual"
+      ],
+      "created_at": "2026-09-28T20:57:16.897Z"
+    }
+  ],
+  "evidenceAlignments": [
+    {
+      "id": "align-01",
+      "lesson_id": "lesson-token-ring-101",
+      "source_evidence_id": "seg-02",
+      "target_evidence_id": "vis-01",
+      "relationship_type": "diagram_label_matches_spoken_term",
+      "explanation": "The spoken lecture references Station A through Station D and clockwise circulation, directly matching the four labeled workstation nodes and circular clockwise arrows in the visual diagram.",
+      "alignment_method": "direct_text_match",
+      "confidence": 0.98,
+      "review_status": "confirmed",
+      "created_at": "2026-03-24T09:06:00.000Z"
+    },
+    {
+      "id": "align-02",
+      "lesson_id": "lesson-token-ring-101",
+      "source_evidence_id": "seg-03",
+      "target_evidence_id": "vis-01",
+      "relationship_type": "audio_explains_visual",
+      "explanation": "The instructor verbally explains how Station A captures the 3-byte token and flips the busy bit, explaining the exact token format table shown at the bottom of the diagram.",
+      "alignment_method": "semantic_similarity",
+      "confidence": 0.94,
+      "review_status": "confirmed",
+      "created_at": "2026-03-24T09:06:00.000Z"
+    },
+    {
+      "id": "align-03",
+      "lesson_id": "lesson-token-ring-101",
+      "source_evidence_id": "seg-05",
+      "target_evidence_id": "vis-01",
+      "relationship_type": "potential_contradiction",
+      "explanation": "The slide text asserts \"Single Cable Cut Disables Entire Loop\", whereas the professor explicitly clarifies in Seg-06 that practical systems use MAUs with bypass relays so single cuts do NOT bring the whole network down.",
+      "alignment_method": "model_inferred",
+      "confidence": 0.92,
+      "review_status": "confirmed",
+      "created_at": "2026-03-24T09:06:00.000Z"
+    },
+    {
+      "id": "align-lesson-1790629036558-1",
+      "lesson_id": "lesson-1790629036558",
+      "source_evidence_id": "seg-file-1790629036863-1701-1",
+      "target_evidence_id": "vis-file-1790629036863-3076",
+      "relationship_type": "audio_explains_visual",
+      "explanation": "Instructor audio introduces and explains the main visual diagram components.",
+      "alignment_method": "semantic_similarity",
+      "confidence": 0.95,
+      "review_status": "pending",
+      "created_at": "2026-09-28T20:57:16.899Z"
+    }
+  ],
+  "conflicts": [
+    {
+      "id": "conflict-01",
+      "lesson_id": "lesson-token-ring-101",
+      "evidence_ids": [
+        "seg-05",
+        "seg-06",
+        "vis-01"
+      ],
+      "conflict_description": "Slide diagram claims single cable cut disables the entire network, while spoken lecture notes that MAUs with bypass relays prevent this failure mode in real deployments.",
+      "audio_claim": "Prof. Rao: Real-world deployments use a Multistation Access Unit (MAU) with electromechanical relays that instantly bypass severed stations (03:36 - 04:30).",
+      "visual_claim": "Diagram Callout: \"Warning Note: Single Cable Cut Disables Entire Loop\" (Slide 1).",
+      "review_status": "acknowledged",
+      "resolution_note": "Pure theoretical ring has single point of failure; practical IEEE 802.5 Token Ring uses physical star with MAU bypass relays.",
+      "created_at": "2026-03-24T09:07:00.000Z"
+    }
+  ],
+  "userCorrections": [],
+  "questionAnswers": [
+    {
+      "id": "qa-01",
+      "lesson_id": "lesson-token-ring-101",
+      "question": "What did the teacher say about the failure warning shown on the diagram?",
+      "direct_answer": "The teacher acknowledged that while the diagram correctly depicts a pure physical ring failing when a cable cuts, real IEEE 802.5 deployments solve this using a Multistation Access Unit (MAU) whose internal relays automatically bypass severed stations.",
+      "explanation": "During the lecture segment from 02:46 to 04:30, Prof. Rao addressed the red vulnerability callout box on the diagram. She instructed students to annotate their notes: although a theoretical ring is disabled by any cable cut, real-world systems wire stations in a physical star through an MAU, maintaining fault tolerance.",
+      "answer_mode": "multimodal",
+      "evidence_references": [
+        {
+          "evidence_id": "vis-01",
+          "modality": "visual",
+          "title": "Diagram Warning Box",
+          "detail": "Warning Note: Single Cable Cut Disables Entire Loop",
+          "source_name": "token_ring_network_diagram.jpg",
+          "confidence": 0.96
+        },
+        {
+          "evidence_id": "seg-05",
+          "modality": "audio",
+          "title": "Audio Lecture @ 02:46",
+          "detail": "Historically, a pure physical ring had a fatal single point of failure...",
+          "timestamp": "02:46",
+          "source_name": "lecture_04_ring_topology_audio.mp3",
+          "confidence": 0.95
+        },
+        {
+          "evidence_id": "seg-06",
+          "modality": "audio",
+          "title": "Audio Lecture @ 03:36",
+          "detail": "Real-world deployments use a Multistation Access Unit or MAU with bypass relays...",
+          "timestamp": "03:36",
+          "source_name": "lecture_04_ring_topology_audio.mp3",
+          "confidence": 0.99
+        }
+      ],
+      "related_concepts": [
+        "Single Point of Failure Vulnerability",
+        "Physical Star vs Logical Ring (MAU)"
+      ],
+      "created_at": "2026-03-24T09:10:00.000Z"
+    }
+  ],
+  "studyArtifacts": [
+    {
+      "id": "art-01",
+      "lesson_id": "lesson-token-ring-101",
+      "artifact_type": "structured_notes",
+      "title": "Token Ring Network Architecture & Media Access",
+      "content": "## 1. Executive Summary\nToken Ring (IEEE 802.5) is a deterministic local area network protocol where stations pass a 3-byte token frame in a closed unidirectional loop. Unlike Ethernet CSMA/CD, no data packet collisions can occur.\n\n## 2. Key Components & Visual Evidence\n- **Logical Topology**: Unidirectional closed ring with clockwise signal propagation (Diagram: Station A → B → C → D).\n- **Workstations**: Repeaters with a 1-bit delay that inspect destination MAC addresses.\n- **Token Format**:\n  - Starting Delimiter (1 Byte)\n  - Access Control (1 Byte, containing Priority bits, Reservation bits, and Token/Busy bit)\n  - Ending Delimiter (1 Byte)\n\n## 3. Discrepancy & Critical Correction\n- **Visual Claim**: Slide warning asserts a single severed cable brings down the entire network.\n- **Spoken Clarification (Prof. Rao @ 03:36)**: In practice, networks use a **Multistation Access Unit (MAU)** forming a physical star with automatic electromechanical bypass relays.\n\n## 4. Deterministic Performance Characteristics\n- Maximum bounded packet transmission delay.\n- Guaranteed bandwidth allocation via priority and reservation bits.",
+      "source_evidence_ids": [
+        "seg-01",
+        "seg-02",
+        "seg-03",
+        "vis-01",
+        "conflict-01"
+      ],
+      "created_at": "2026-03-24T09:12:00.000Z",
+      "updated_at": "2026-03-24T09:12:00.000Z"
+    },
+    {
+      "id": "art-02",
+      "lesson_id": "lesson-token-ring-101",
+      "artifact_type": "flashcards",
+      "title": "Token Ring Core Revision Flashcards",
+      "content": "Interactive flashcards covering Token Ring mechanics, MAU bypass, and IEEE 802.5 standard.",
+      "parsed_data": {
+        "flashcards": [
+          {
+            "id": "fc-1",
+            "question": "What is the standard IEEE specification for Token Ring networks?",
+            "answer": "IEEE 802.5.",
+            "related_concept": "Token Ring Architecture",
+            "source_evidence_hint": "Spoken in segment 01 (00:00 - 00:28)"
+          },
+          {
+            "id": "fc-2",
+            "question": "How many bytes comprise a free Token frame, and what are its three fields?",
+            "answer": "3 bytes total: Starting Delimiter (1B), Access Control (1B), and Ending Delimiter (1B).",
+            "related_concept": "Token Circulation & Busy Bit",
+            "source_evidence_hint": "Visual Diagram lower table + Segment 03"
+          },
+          {
+            "id": "fc-3",
+            "question": "How do modern Token Ring networks prevent the single-cable-cut failure mode shown on slides?",
+            "answer": "They deploy Multistation Access Units (MAUs) in a physical star topology with internal relays that automatically bypass broken or inactive stations.",
+            "related_concept": "Physical Star vs Logical Ring (MAU)",
+            "source_evidence_hint": "Prof. Rao lecture clarification at 03:36"
+          },
+          {
+            "id": "fc-4",
+            "question": "Why are collisions impossible in a healthy Token Ring topology?",
+            "answer": "Access is deterministic; only the station currently holding the captured token is permitted to transmit data.",
+            "related_concept": "Deterministic Access vs Collision",
+            "source_evidence_hint": "Audio Segment 04 (01:59 - 02:45)"
+          }
+        ]
+      },
+      "source_evidence_ids": [
+        "seg-01",
+        "seg-03",
+        "seg-04",
+        "seg-06",
+        "vis-01"
+      ],
+      "created_at": "2026-03-24T09:13:00.000Z",
+      "updated_at": "2026-03-24T09:13:00.000Z"
+    },
+    {
+      "id": "art-03",
+      "lesson_id": "lesson-token-ring-101",
+      "artifact_type": "practice_quiz",
+      "title": "Practice Quiz: Token Ring & Deterministic MAC",
+      "content": "Multiple-choice practice questions grounded in lecture audio and slide evidence.",
+      "parsed_data": {
+        "quiz": [
+          {
+            "id": "q-1",
+            "question": "What action does a station take upon capturing a free token to transmit data?",
+            "options": [
+              "Broadcasts a beacon frame to all stations",
+              "Flips the token busy bit from 0 to 1 and appends its data payload",
+              "Sends an RTS/CTS handshake packet to Station D",
+              "Halts clockwise circulation for 10 milliseconds"
+            ],
+            "correct_index": 1,
+            "explanation": "As explained in Audio Segment 03, the station flips the token bit in the Access Control byte from 0 (free) to 1 (busy) and appends data and destination address.",
+            "supporting_source": "Audio Segment 03 (01:09 - 01:58)"
+          },
+          {
+            "id": "q-2",
+            "question": "According to the lecture clarification, why is the slide warning (\"Single Cable Cut Disables Entire Loop\") misleading for practical deployments?",
+            "options": [
+              "The cables used in Token Ring are indestructible optical glass",
+              "Each station contains a backup radio transceiver",
+              "MAUs wire the network as a physical star and bypass severed nodes with relays",
+              "Token Ring automatically converts to Ethernet bus mode"
+            ],
+            "correct_index": 2,
+            "explanation": "Prof. Rao explicitly noted that physical star wiring via MAUs uses electromechanical relays to automatically bypass disconnected stations.",
+            "supporting_source": "Audio Segment 06 (03:36 - 04:30)"
+          },
+          {
+            "id": "q-3",
+            "question": "In the lecture diagram, which station acts as the primary receiver for Station A’s transmission?",
+            "options": [
+              "Station B",
+              "Station C",
+              "Station D",
+              "All stations simultaneously"
+            ],
+            "correct_index": 1,
+            "explanation": "The diagram and transcript segment 03 explicitly specify Station A transmitting to Station C, with Station B acting as an intermediate repeater.",
+            "supporting_source": "Diagram Visual Evidence & Audio Seg 03"
+          }
+        ]
+      },
+      "source_evidence_ids": [
+        "seg-03",
+        "seg-06",
+        "vis-01"
+      ],
+      "created_at": "2026-03-24T09:14:00.000Z",
+      "updated_at": "2026-03-24T09:14:00.000Z"
+    },
+    {
+      "id": "art-1790629053833",
+      "lesson_id": "lesson-1790629036558",
+      "artifact_type": "practice_quiz",
+      "title": "Introduction to Artificial Intelligence and Machine Learning — Practice Quiz",
+      "content": "Practice quiz grounded in lecture evidence.",
+      "parsed_data": {
+        "quiz": [
+          {
+            "id": "q-1",
+            "question": "Which protocol or mechanism was highlighted in the lecture audio?",
+            "options": [
+              "Deterministic Flow Protocol",
+              "Unregulated Bus Broadcast",
+              "Random Backoff CSMA/CD",
+              "Static Point-to-Point Mesh"
+            ],
+            "correct_index": 0,
+            "explanation": "Emphasized throughout the audio lecture segments.",
+            "supporting_source": "Audio Segment 01"
+          }
+        ]
+      },
+      "source_evidence_ids": [
+        "seg-file-1790629036863-1701-1",
+        "seg-file-1790629036863-1701-2",
+        "seg-file-1790629036863-1701-3",
+        "vis-file-1790629036863-3076",
+        "vis-file-1790629036863-6712",
+        "vis-file-1790629036863-1461"
+      ],
+      "created_at": "2026-09-28T20:57:33.833Z",
+      "updated_at": "2026-09-28T20:57:33.833Z"
+    }
+  ],
+  "processingJobs": [
+    {
+      "id": "job-1790629036863-9672",
+      "lesson_id": "lesson-1790629036558",
+      "lesson_title": "Introduction to Artificial Intelligence and Machine Learning",
+      "source_file_id": "file-1790629036863-1461",
+      "filename": "Introduction_to_AI_and_Machine_Learning_Notes.pdf",
+      "stage": "completed",
+      "status": "completed",
+      "progress": 100,
+      "started_at": "2026-09-28T20:57:16.863Z",
+      "completed_at": "2026-09-28T20:57:16.899Z"
+    },
+    {
+      "id": "job-1790629036863-4919",
+      "lesson_id": "lesson-1790629036558",
+      "lesson_title": "Introduction to Artificial Intelligence and Machine Learning",
+      "source_file_id": "file-1790629036863-6712",
+      "filename": "a_clean_modern_neon_glow_infographic_poster_on_a.png",
+      "stage": "completed",
+      "status": "completed",
+      "progress": 100,
+      "started_at": "2026-09-28T20:57:16.863Z",
+      "completed_at": "2026-09-28T20:57:16.899Z"
+    },
+    {
+      "id": "job-1790629036863-3198",
+      "lesson_id": "lesson-1790629036558",
+      "lesson_title": "Introduction to Artificial Intelligence and Machine Learning",
+      "source_file_id": "file-1790629036863-3076",
+      "filename": "AI_ML_Lecture_Audio_Script.txt",
+      "stage": "completed",
+      "status": "completed",
+      "progress": 100,
+      "started_at": "2026-09-28T20:57:16.863Z",
+      "completed_at": "2026-09-28T20:57:16.899Z"
+    },
+    {
+      "id": "job-1790629036863-8514",
+      "lesson_id": "lesson-1790629036558",
+      "lesson_title": "Introduction to Artificial Intelligence and Machine Learning",
+      "source_file_id": "file-1790629036863-1701",
+      "filename": "Introduction_to_AI_and_Machine_Learning_Audio.mp3",
+      "stage": "completed",
+      "status": "completed",
+      "progress": 100,
+      "started_at": "2026-09-28T20:57:16.863Z",
+      "completed_at": "2026-09-28T20:57:16.899Z"
+    },
+    {
+      "id": "job-init-01",
+      "lesson_id": "lesson-token-ring-101",
+      "lesson_title": "Computer Networks: Ring Topology & Token Passing",
+      "source_file_id": "file-audio-ring-01",
+      "filename": "lecture_04_ring_topology_audio.mp3",
+      "stage": "completed",
+      "status": "completed",
+      "progress": 100,
+      "started_at": "2026-03-24T09:02:00.000Z",
+      "completed_at": "2026-03-24T09:02:45.000Z"
+    },
+    {
+      "id": "job-init-02",
+      "lesson_id": "lesson-token-ring-101",
+      "lesson_title": "Computer Networks: Ring Topology & Token Passing",
+      "source_file_id": "file-diagram-ring-01",
+      "filename": "token_ring_network_diagram.jpg",
+      "stage": "completed",
+      "status": "completed",
+      "progress": 100,
+      "started_at": "2026-03-24T09:03:00.000Z",
+      "completed_at": "2026-03-24T09:03:30.000Z"
+    }
+  ]
+}

@@ -1,0 +1,87 @@
+{
+  "entities": {
+    "UserProfile": {
+      "title": "UserProfile",
+      "description": "User account profile generated from Google authentication",
+      "type": "object",
+      "properties": {
+        "userId": { "type": "string" },
+        "email": { "type": "string", "format": "email" },
+        "displayName": { "type": "string" },
+        "photoURL": { "type": "string" },
+        "role": { "type": "string", "enum": ["student", "instructor", "admin"] },
+        "createdAt": { "type": "string" },
+        "lastLoginAt": { "type": "string" }
+      },
+      "required": ["userId", "email", "displayName"]
+    },
+    "ChatSession": {
+      "title": "ChatSession",
+      "description": "Multi-turn Gemini chatbot session thread with persona role and search grounding",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "userId": { "type": "string" },
+        "title": { "type": "string" },
+        "systemRole": { "type": "string", "enum": ["academic_tutor", "socratic_mentor", "exam_prepper", "diagram_explainer"] },
+        "model": { "type": "string", "enum": ["gemini-3.1-pro-preview", "gemini-3.5-flash", "gemini-3.1-flash-lite"] },
+        "searchGroundingEnabled": { "type": "boolean" },
+        "lessonId": { "type": "string" },
+        "createdAt": { "type": "string" },
+        "updatedAt": { "type": "string" }
+      },
+      "required": ["id", "userId", "title", "model", "systemRole"]
+    },
+    "ChatMessage": {
+      "title": "ChatMessage",
+      "description": "A single turn in the multi-turn conversational chat thread",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "sessionId": { "type": "string" },
+        "userId": { "type": "string" },
+        "role": { "type": "string", "enum": ["user", "model", "system"] },
+        "content": { "type": "string" },
+        "modelUsed": { "type": "string" },
+        "searchSources": { "type": "string" },
+        "timestamp": { "type": "string" }
+      },
+      "required": ["id", "sessionId", "userId", "role", "content", "timestamp"]
+    },
+    "UserStudyData": {
+      "title": "UserStudyData",
+      "description": "Persisted student learning analytics, bookmarked concepts, and study time logs",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "userId": { "type": "string" },
+        "lessonId": { "type": "string" },
+        "masteryScore": { "type": "number" },
+        "studyMinutes": { "type": "number" },
+        "flashcardsReviewed": { "type": "number" },
+        "bookmarkedEvidenceIds": { "type": "string" },
+        "notes": { "type": "string" },
+        "updatedAt": { "type": "string" }
+      },
+      "required": ["id", "userId", "lessonId"]
+    }
+  },
+  "firestore": {
+    "/users/{userId}": {
+      "schema": "UserProfile",
+      "description": "Stores individual user profile data"
+    },
+    "/chat_sessions/{sessionId}": {
+      "schema": "ChatSession",
+      "description": "Collection of multi-turn conversational chat threads"
+    },
+    "/chat_sessions/{sessionId}/messages/{messageId}": {
+      "schema": "ChatMessage",
+      "description": "Messages belonging to a specific conversation thread"
+    },
+    "/user_studies/{studyId}": {
+      "schema": "UserStudyData",
+      "description": "Student analytics and study notes per lesson"
+    }
+  }
+}

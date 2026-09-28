@@ -1,0 +1,8 @@
+{
+  "name": "LectureLens AI",
+  "description": "Multimodal Lecture Reconstruction & Accessible Study Engine connecting audio, diagrams, OCR, and concepts with evidence-grounded answers.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
